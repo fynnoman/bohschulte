@@ -1,0 +1,168 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Wordmark from "./Wordmark";
+
+const links = [
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/historie", label: "Historie" },
+  { href: "/referenzen", label: "Referenzen" },
+  { href: "/kontakt", label: "Kontakt" },
+];
+
+export default function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <>
+      <header
+        className={[
+          "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+          scrolled ? "pt-2 sm:pt-3" : "pt-4 sm:pt-6",
+        ].join(" ")}
+      >
+        <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
+          <div
+            className={[
+              "flex items-center justify-between rounded-full transition-all duration-500",
+              scrolled
+                ? "glass px-4 py-2.5 sm:px-5"
+                : "px-4 py-3 sm:px-5",
+            ].join(" ")}
+            style={
+              scrolled
+                ? {}
+                : {
+                    background: "rgba(251,248,243,0.35)",
+                    backdropFilter: "saturate(160%) blur(14px)",
+                    WebkitBackdropFilter: "saturate(160%) blur(14px)",
+                    border: "1px solid rgba(10,17,22,0.06)",
+                  }
+            }
+          >
+            <Link href="/" className="group flex items-center gap-3">
+              <Wordmark />
+            </Link>
+
+            <nav className="hidden md:flex items-center gap-1">
+              {links.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="group relative px-3 py-2 text-[14px] text-slate-800 hover:text-slate-950 transition-colors"
+                >
+                  <span>{l.label}</span>
+                  <span className="absolute inset-x-3 bottom-1.5 h-px origin-left scale-x-0 bg-slate-900 transition-transform duration-300 group-hover:scale-x-100" />
+                </Link>
+              ))}
+              <Link
+                href="/kontakt"
+                className="ml-3 inline-flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-[13px] font-medium text-bone-50 transition-transform duration-300 hover:-translate-y-[1px] hover:bg-forest-700"
+              >
+                Angebot anfragen
+                <span aria-hidden>→</span>
+              </Link>
+            </nav>
+
+            <button
+              type="button"
+              aria-label="Menü öffnen"
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-900/10"
+            >
+              <span className="relative block h-3 w-4">
+                <span
+                  className={[
+                    "absolute left-0 top-0 h-px w-4 bg-slate-950 transition-transform duration-300",
+                    open ? "translate-y-[6px] rotate-45" : "",
+                  ].join(" ")}
+                />
+                <span
+                  className={[
+                    "absolute left-0 top-[6px] h-px w-4 bg-slate-950 transition-opacity duration-200",
+                    open ? "opacity-0" : "opacity-100",
+                  ].join(" ")}
+                />
+                <span
+                  className={[
+                    "absolute left-0 top-[12px] h-px w-4 bg-slate-950 transition-transform duration-300",
+                    open ? "-translate-y-[6px] -rotate-45" : "",
+                  ].join(" ")}
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-40 md:hidden"
+          >
+            <div
+              className="absolute inset-0 bg-bone-50"
+              onClick={() => setOpen(false)}
+            />
+            <motion.nav
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="relative flex h-full w-full flex-col items-start justify-center px-8 pt-24 pb-10"
+            >
+              <ul className="w-full space-y-4">
+                {links.map((l, i) => (
+                  <motion.li
+                    key={l.href}
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.05 + i * 0.05 }}
+                  >
+                    <Link
+                      href={l.href}
+                      onClick={() => setOpen(false)}
+                      className="font-display text-[44px] leading-none tracking-brand-tight text-slate-950"
+                    >
+                      {l.label}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+              <div className="mt-10 hairline" />
+              <div className="mt-8 space-y-2">
+                <a
+                  href="tel:+4968311285730"
+                  className="block text-[15px] text-slate-800"
+                >
+                  06831 128573
+                </a>
+                <a
+                  href="mailto:b.osso@bohschulte.de"
+                  className="block text-[15px] text-slate-800"
+                >
+                  b.osso@bohschulte.de
+                </a>
+              </div>
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
