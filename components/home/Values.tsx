@@ -39,7 +39,7 @@ export default function Values() {
   return (
     <section className="relative bg-slate-950 py-28 text-bone-50 sm:py-36">
       <div className="pointer-events-none absolute inset-0 opacity-[0.05] bg-grain" />
-      <div className="relative mx-auto max-w-[1240px] px-6 sm:px-8">
+      <div className="relative mx-auto max-w-[1240px] px-5 sm:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-20">
           <div className="md:sticky md:top-32 md:h-fit">
             <p className="eyebrow" style={{ color: "rgba(251,248,243,0.65)" }}>

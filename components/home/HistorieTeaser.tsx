@@ -8,8 +8,8 @@ import { timeline } from "@/lib/data";
 
 export default function HistorieTeaser() {
   return (
-    <section className="relative overflow-hidden bg-bone-50 py-28 sm:py-36">
-      <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+    <section className="relative overflow-hidden bg-bone-50 py-20 sm:py-28 md:py-36">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] md:gap-16">
           <div className="md:sticky md:top-32 md:h-fit">
             <p className="eyebrow">Historie</p>
@@ -46,15 +46,15 @@ export default function HistorieTeaser() {
                     delay: i * 0.08,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="grid grid-cols-[auto_1fr] gap-8 border-t border-slate-900/10 pt-8"
+                  className="grid grid-cols-[auto_1fr] gap-5 border-t border-slate-900/10 pt-6 sm:gap-8 sm:pt-8"
                 >
                   <div>
-                    <p className="tnum font-display text-[44px] leading-none text-slate-950 md:text-[56px]">
+                    <p className="tnum font-display text-[36px] leading-none text-slate-950 sm:text-[44px] md:text-[56px]">
                       {t.year}
                     </p>
                   </div>
                   <div>
-                    <h3 className="font-display text-[22px] leading-tight text-slate-950">
+                    <h3 className="font-display text-[20px] leading-tight text-slate-950 sm:text-[22px]">
                       {t.title}
                     </h3>
                     <p className="mt-3 max-w-lg text-[14.5px] leading-relaxed text-slate-700">

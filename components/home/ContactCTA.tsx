@@ -7,8 +7,8 @@ import PlaceholderImage from "../PlaceholderImage";
 
 export default function ContactCTA() {
   return (
-    <section className="relative overflow-hidden bg-bone-50 py-28 sm:py-36">
-      <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+    <section className="relative overflow-hidden bg-bone-50 py-20 sm:py-28 md:py-36">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function ContactCTA() {
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-forest-900/90 to-forest-500/75" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.06] bg-grain" />
 
-          <div className="relative grid gap-12 p-10 sm:p-14 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:p-20">
+          <div className="relative grid gap-10 p-6 sm:gap-12 sm:p-10 md:p-14 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:p-20">
             <div>
               <p className="eyebrow" style={{ color: "rgba(251,248,243,0.65)" }}>
                 Angebot & Rückruf
@@ -66,7 +66,7 @@ export default function ContactCTA() {
               </div>
             </div>
 
-            <div className="glass-dark rounded-[22px] p-7">
+            <div className="glass-dark rounded-[22px] p-6 sm:p-7">
               <p className="eyebrow" style={{ color: "rgba(251,248,243,0.65)" }}>
                 Ihr Ansprechpartner
               </p>

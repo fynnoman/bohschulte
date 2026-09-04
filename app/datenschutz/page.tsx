@@ -11,7 +11,7 @@ export default function DatenschutzPage() {
     <>
       <PageHeader eyebrow="Rechtliches" title="Datenschutz" />
       <section className="bg-bone-50 pb-24">
-        <div className="mx-auto max-w-[820px] px-6 sm:px-8">
+        <div className="mx-auto max-w-[820px] px-5 sm:px-8">
           <article className="space-y-10 text-[15.5px] leading-relaxed text-slate-800">
             <div>
               <h2 className="eyebrow">Verantwortlicher</h2>

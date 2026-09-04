@@ -24,9 +24,9 @@ export default function KontaktPage() {
       />
 
       <section className="bg-bone-50 pb-24">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
           <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:gap-10">
-            <div className="glass rounded-[24px] p-8 md:p-10">
+            <div className="glass rounded-[24px] p-6 sm:p-8 md:p-10">
               <p className="eyebrow">Zentraler Kontakt</p>
               <p className="mt-5 font-display font-light text-[clamp(1.8rem,4vw,2.8rem)] leading-tight text-slate-950">
                 Benni Osso
@@ -61,7 +61,7 @@ export default function KontaktPage() {
               </div>
             </div>
 
-            <aside className="rounded-[24px] bg-slate-950 p-8 text-bone-50 md:p-10">
+            <aside className="rounded-[24px] bg-slate-950 p-6 text-bone-50 sm:p-8 md:p-10">
               <p className="eyebrow" style={{ color: "rgba(251,248,243,0.65)" }}>
                 Anschrift
               </p>
@@ -92,7 +92,7 @@ export default function KontaktPage() {
             </aside>
           </div>
 
-          <div className="mt-20">
+          <div className="mt-14 sm:mt-20">
             <p className="eyebrow">Weitere Ansprechpersonen</p>
             <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {team
@@ -121,7 +121,7 @@ export default function KontaktPage() {
             </ul>
           </div>
 
-          <div className="mt-24 rounded-[24px] bg-bone-100 p-8 md:p-12">
+          <div className="mt-16 sm:mt-24 rounded-[24px] bg-bone-100 p-6 sm:p-8 md:p-12">
             <p className="eyebrow">Schnelle Anfrage</p>
             <h2 className="mt-5 max-w-3xl font-display font-light text-[clamp(1.6rem,3.5vw,2.6rem)] leading-tight tracking-brand-tight text-slate-950">
               Beschreiben Sie uns kurz das Objekt und die Aufgabe — wir kommen
@@ -157,14 +157,14 @@ function ContactForm() {
           className="mt-3 w-full rounded-[14px] border border-slate-900/10 bg-bone-50 px-4 py-3 text-[15px] leading-relaxed text-slate-950 outline-none transition-colors focus:border-forest-500"
         />
       </div>
-      <div className="md:col-span-2 flex items-center justify-between gap-6">
-        <p className="text-[12px] text-slate-600">
+      <div className="md:col-span-2 flex flex-col-reverse items-stretch gap-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+        <p className="text-[12px] leading-relaxed text-slate-600">
           Mit dem Absenden bestätigen Sie, dass wir Ihre Angaben zur
           Bearbeitung Ihrer Anfrage verwenden dürfen.
         </p>
         <button
           type="submit"
-          className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-[14px] font-medium text-bone-50 transition-transform duration-300 hover:-translate-y-[1px] hover:bg-forest-700"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 text-[14px] font-medium text-bone-50 transition-transform duration-300 hover:-translate-y-[1px] hover:bg-forest-700 sm:w-auto sm:justify-start sm:py-3"
         >
           Anfrage senden
           <span aria-hidden>→</span>

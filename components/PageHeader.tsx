@@ -16,7 +16,7 @@ export default function PageHeader({
 }) {
   return (
     <header className="relative bg-bone-50 pb-16 pt-36 sm:pb-20 sm:pt-44">
-      <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

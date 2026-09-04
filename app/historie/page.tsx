@@ -29,20 +29,20 @@ export default function HistoriePage() {
       />
 
       <section className="bg-bone-50 pb-24">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
           <ul className="mt-6">
             {timeline.map((t, i) => (
               <li
                 key={t.year}
-                className="grid grid-cols-[auto_1fr] gap-8 border-t border-slate-900/10 py-10 md:gap-16 md:py-14"
+                className="grid grid-cols-[auto_1fr] gap-5 border-t border-slate-900/10 py-8 sm:gap-8 sm:py-10 md:gap-16 md:py-14"
               >
                 <div>
-                  <p className="tnum font-display font-light text-[54px] leading-none text-slate-950 md:text-[72px]">
+                  <p className="tnum font-display font-light text-[40px] leading-none text-slate-950 sm:text-[54px] md:text-[72px]">
                     {t.year}
                   </p>
                 </div>
                 <div className="max-w-2xl">
-                  <h2 className="font-display text-[24px] leading-tight text-slate-950 md:text-[30px]">
+                  <h2 className="font-display text-[22px] leading-tight text-slate-950 sm:text-[24px] md:text-[30px]">
                     {t.title}
                   </h2>
                   <p className="mt-4 text-[15.5px] leading-relaxed text-slate-700">
@@ -68,8 +68,8 @@ export default function HistoriePage() {
         paragraph="Zwischen Saarschleife und Untere Saar. Wir arbeiten dort, wo wir seit drei Generationen leben. Kurze Wege, gewachsene Beziehungen, Verantwortung, die nicht erst im Vertrag steht."
       />
 
-      <section className="bg-bone-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+      <section className="bg-bone-50 py-20 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
           <div className="max-w-2xl">
             <p className="eyebrow">Team</p>
             <h2 className="mt-5 font-display font-light text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.02] tracking-brand-tight text-slate-950">

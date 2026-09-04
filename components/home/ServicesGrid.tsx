@@ -10,8 +10,8 @@ import PlaceholderImage from "../PlaceholderImage";
 
 export default function ServicesGrid() {
   return (
-    <section id="leistungen" className="relative bg-bone-50 py-24 sm:py-32">
-      <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+    <section id="leistungen" className="relative bg-bone-50 py-20 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="eyebrow">Leistungen</p>

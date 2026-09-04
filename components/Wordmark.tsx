@@ -1,5 +1,11 @@
-// Minimal editorial wordmark. Reads as a stamp / masthead.
-// Meant to be small in the nav and larger on the footer.
+// Nav/footer wordmark.
+// - Dark variant (on light backgrounds like nav): actual company logo image.
+// - Light variant (on dark backgrounds like footer): typographic wordmark,
+//   because the current logo file is a JPEG with a light background — it would
+//   render as a bright box on dark surfaces. Replace with a transparent PNG or
+//   SVG later to use the real logo everywhere.
+
+import Image from "next/image";
 
 export default function Wordmark({
   variant = "dark",
@@ -8,18 +14,21 @@ export default function Wordmark({
   variant?: "dark" | "light";
   compact?: boolean;
 }) {
-  const fg = variant === "dark" ? "#0A1116" : "#FBF8F3";
-  const muted = variant === "dark" ? "#64707A" : "rgba(251,248,243,0.6)";
-
-  if (compact) {
+  if (variant === "dark") {
     return (
-      <div className="flex items-center gap-2">
-        <span
-          className="font-display text-[22px] leading-none tracking-brand-tight"
-          style={{ color: fg }}
-        >
-          Bohschulte
-        </span>
+      <div className="flex items-center">
+        <Image
+          src="/logo.jpg"
+          alt="Bohschulte Gebäudereinigung"
+          width={304}
+          height={84}
+          priority
+          className={
+            compact
+              ? "h-7 w-auto sm:h-8"
+              : "h-8 w-auto sm:h-9 md:h-10"
+          }
+        />
       </div>
     );
   }
@@ -27,14 +36,13 @@ export default function Wordmark({
   return (
     <div className="flex items-baseline gap-3">
       <span
-        className="font-display text-[26px] leading-none tracking-brand-tight"
-        style={{ color: fg }}
+        className="font-display text-[26px] leading-none tracking-brand-tight text-bone-50"
       >
         Bohschulte
       </span>
       <span
         className="hidden sm:inline eyebrow"
-        style={{ color: muted, letterSpacing: "0.22em" }}
+        style={{ color: "rgba(251,248,243,0.6)", letterSpacing: "0.22em" }}
       >
         · seit 1949
       </span>

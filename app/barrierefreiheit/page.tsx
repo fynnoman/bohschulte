@@ -11,7 +11,7 @@ export default function BarrierefreiheitPage() {
     <>
       <PageHeader eyebrow="Rechtliches" title="Erklärung zur Barrierefreiheit" />
       <section className="bg-bone-50 pb-24">
-        <div className="mx-auto max-w-[820px] px-6 sm:px-8">
+        <div className="mx-auto max-w-[820px] px-5 sm:px-8">
           <article className="space-y-8 text-[15.5px] leading-relaxed text-slate-800">
             <p>
               Wir bemühen uns, unsere Website im Einklang mit den Vorgaben zur

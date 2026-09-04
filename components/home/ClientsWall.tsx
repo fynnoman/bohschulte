@@ -8,8 +8,8 @@ import { clients } from "@/lib/data";
 
 export default function ClientsWall() {
   return (
-    <section className="relative bg-[#EFF3EC] py-28 sm:py-36">
-      <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+    <section className="relative bg-[#EFF3EC] py-20 sm:py-28 md:py-36">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-16">
           <div className="md:sticky md:top-32 md:h-fit">
             <p className="eyebrow">Referenzen</p>

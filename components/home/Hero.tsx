@@ -42,7 +42,7 @@ export default function Hero() {
       {/* Background image, subtly scaling and drifting */}
       <motion.div
         style={{ y: imageY, scale: imageScale }}
-        className="absolute inset-x-6 bottom-6 top-24 z-0 overflow-hidden rounded-[28px] sm:inset-x-8 md:inset-x-10 md:top-28 md:rounded-[36px] will-change-transform"
+        className="absolute inset-x-4 bottom-4 top-24 z-0 overflow-hidden rounded-[22px] sm:inset-x-8 sm:bottom-6 sm:rounded-[28px] md:inset-x-10 md:top-28 md:rounded-[36px] will-change-transform"
       >
         <PlaceholderImage
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80"
@@ -59,7 +59,7 @@ export default function Hero() {
       {/* Content, drifting up slightly on scroll */}
       <motion.div
         style={{ y: contentY, opacity: contentOpacity }}
-        className="relative z-10 mx-auto flex min-h-[100dvh] max-w-[1240px] flex-col justify-end px-6 pb-16 sm:px-8 md:pb-24"
+        className="relative z-10 mx-auto flex min-h-[100dvh] max-w-[1240px] flex-col justify-end px-5 pb-14 sm:px-8 sm:pb-20 md:pb-24"
       >
         <div className="max-w-[820px]">
           <motion.p
@@ -121,12 +121,13 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Floating liquid-glass "facts" card, pinned bottom-right on md+ */}
+        {/* Floating liquid-glass "facts" card. Below CTA on mobile,
+             pinned bottom-right on md+. */}
         <motion.aside
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="glass mt-12 hidden max-w-[380px] rounded-[22px] p-6 md:absolute md:right-6 md:bottom-16 md:mt-0 md:block lg:right-10 lg:bottom-24"
+          className="glass mt-8 max-w-full rounded-[20px] p-5 sm:mt-10 sm:p-6 md:absolute md:right-6 md:bottom-16 md:mt-0 md:max-w-[380px] lg:right-10 lg:bottom-24"
         >
           <div className="grid grid-cols-3 gap-4">
             <Fact k="1949" v="Gegründet" />

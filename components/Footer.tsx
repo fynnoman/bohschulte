@@ -38,7 +38,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-950 text-bone-50">
       <div className="pointer-events-none absolute inset-0 opacity-[0.05] bg-grain" />
-      <div className="relative mx-auto max-w-[1240px] px-6 pt-24 pb-12 sm:px-8">
+      <div className="relative mx-auto max-w-[1240px] px-6 pt-20 pb-10 sm:pt-24 sm:pb-12 sm:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div>
             <Wordmark variant="light" />

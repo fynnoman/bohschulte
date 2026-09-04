@@ -26,7 +26,7 @@ export default function LeistungenPage() {
       />
 
       <section className="bg-bone-50 pb-8">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
           <ul className="flex flex-wrap gap-2 border-t border-slate-900/10 pt-8">
             {services.map((s) => (
               <li key={s.slug}>
@@ -43,7 +43,7 @@ export default function LeistungenPage() {
       </section>
 
       <section className="bg-bone-50 pb-24">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
           {services.map((s, i) => (
             <article
               key={s.slug}
@@ -93,8 +93,8 @@ export default function LeistungenPage() {
         </div>
       </section>
 
-      <section className="bg-[#EFF3EC] py-24 sm:py-32">
-        <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
+      <section className="bg-[#EFF3EC] py-20 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
           <div className="grid gap-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
             <div>
               <p className="eyebrow">Ergänzend</p>
