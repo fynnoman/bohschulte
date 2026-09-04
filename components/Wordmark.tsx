@@ -1,9 +1,8 @@
 // Nav/footer wordmark.
-// - Dark variant (on light backgrounds like nav): actual company logo image.
+// - Dark variant (on light backgrounds like nav): actual company logo — the
+//   original artwork with black wordmark + red/green rosette.
 // - Light variant (on dark backgrounds like footer): typographic wordmark,
-//   because the current logo file is a JPEG with a light background — it would
-//   render as a bright box on dark surfaces. Replace with a transparent PNG or
-//   SVG later to use the real logo everywhere.
+//   because the logo's black wordmark would be unreadable on slate-950.
 
 import Image from "next/image";
 
@@ -18,15 +17,15 @@ export default function Wordmark({
     return (
       <div className="flex items-center">
         <Image
-          src="/logo.jpg"
+          src="/logo.png"
           alt="Bohschulte Gebäudereinigung"
-          width={304}
-          height={84}
+          width={2168}
+          height={725}
           priority
           className={
             compact
-              ? "h-7 w-auto sm:h-8"
-              : "h-8 w-auto sm:h-9 md:h-10"
+              ? "h-8 w-auto sm:h-9"
+              : "h-9 w-auto sm:h-10 md:h-11"
           }
         />
       </div>
